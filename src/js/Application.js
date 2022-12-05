@@ -9,7 +9,7 @@ export default class Application extends EventEmitter {
 
   constructor() {
     super();
-    this.emojis = [];
+      this.emojis = ["🐒", "🦍", "🦧"];
     this.banana = "🍌";
     this.emit(Application.events.READY);
   }
@@ -17,5 +17,9 @@ export default class Application extends EventEmitter {
     this.emojis = emojis;
   }
 
-  addBananas() {}
-}
+    addBananas() {
+        
+        document.getElementById("monkeys").innerHTML = this.emojis.map(this.mb);
+        this.mb = [this.emojis, this.banana].join("");
+        }
+    }

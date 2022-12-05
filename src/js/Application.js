@@ -21,5 +21,6 @@ export default class Application extends EventEmitter {
         const paragraph = document.createElement("p"); 
         document.getElementById("emojis").appendChild(paragraph);
         this.mb = [this.emojis, this.banana].join("");
+        document.getElementById("p").innerHTML = this.mb;
     }
 }

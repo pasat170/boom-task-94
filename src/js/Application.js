@@ -20,7 +20,9 @@ export default class Application extends EventEmitter {
     addBananas() {   
         const paragraph = document.createElement("p"); 
         document.getElementById("emojis").appendChild(paragraph);
-        this.mb = [this.emojis, this.banana].join("");
+        this.mb = Array.prototype.map.call(this.emojis, function (monkey) {
+            return monkey + "🍌";
+        });
         document.getElementById("p").innerHTML = this.mb;
     }
 }
